@@ -29,4 +29,6 @@
         <addUniqueConstraint columnNames="email" tableName="example_table" constraintName="unique_email"/>
     </changeSet>
 
+    <include file="db/scripts/customer-changelog.sql"/>
+
 </databaseChangeLog>
