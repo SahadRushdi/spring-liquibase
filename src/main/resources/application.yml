@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/test1
+    username: root
+    password: 12345
+
+  liquibase:
+    enabled: true
+    drop-first: false
+    change-log: classpath:/db/changelog/db.liquibase-changelog.xml

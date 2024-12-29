@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+        http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <!-- Example ChangeSet 1: Create a Table -->
+    <changeSet id="1" author="yourname">
+        <createTable tableName="example_table">
+            <column name="id" type="INT" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+    </changeSet>
+
+    <!-- Example ChangeSet 2: Add a Column to an Existing Table -->
+    <changeSet id="2" author="yourname">
+        <addColumn tableName="example_table">
+            <column name="email" type="VARCHAR(255)"/>
+        </addColumn>
+    </changeSet>
+
+    <!-- Example ChangeSet 3: Add a Unique Constraint -->
+    <changeSet id="3" author="yourname">
+        <addUniqueConstraint columnNames="email" tableName="example_table" constraintName="unique_email"/>
+    </changeSet>
+
+</databaseChangeLog>
